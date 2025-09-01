@@ -7,6 +7,13 @@ pipeline {
     }
 
     stages {
+        stage('Checkout') {
+            steps {
+                // Pull the code from Git
+                git branch: 'main', url: ' https://github.com/eduval/testKelowna.git'
+            }
+        }       
+
         stage('Build') {
             steps {
                 sh 'npm install'
