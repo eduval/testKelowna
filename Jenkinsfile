@@ -28,9 +28,6 @@ pipeline {
         }
 
         stage('Production') {
-            when {
-                branch 'main'
-            }
             steps {
                 // Deploy to production with token
                 sh 'firebase use production-env-devnet --token $FIREBASE_TOKEN'
