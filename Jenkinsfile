@@ -31,7 +31,7 @@ pipeline {
             }
             steps {
                 // Deploy to production with token
-                sh 'firebase use production --token $FIREBASE_TOKEN'
+                sh 'firebase use production-env-devnet --token $FIREBASE_TOKEN'
                 sh 'firebase deploy --only hosting --token $FIREBASE_TOKEN'
             }
         }
