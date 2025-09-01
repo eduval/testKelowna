@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'Nothing to DO!'
+                echo 'Nothing to DO!'
             }
         }
 
